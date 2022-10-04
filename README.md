@@ -4,7 +4,7 @@
  Controle de Fluxo de caixa
 
 ## 💻📱 Preview
-<a href="">Acesse</a>
+<a href="https://github.com/Thiago2436/fluxo-caixa/blob/main/src/index.html">Acesse</a>
 <div style="display: flex; margin-bottom: 1rem">
   <img  src="./images/screenshot-web.jpg" width="800" style="margin-right: 1rem" />
   <img src="./images/screenshot-mobile.jpg" width="250"/>
