@@ -1,7 +1,7 @@
 # FLUXO DE CAIXA 💰
   
 ## Descrição
- Contrele de Fluxo de caixa
+ Controle de Fluxo de caixa
 
 ## 💻📱 Preview
 <a href="">Acesse</a>
