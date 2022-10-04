@@ -27,7 +27,7 @@ json-server ./src/server.json --port 3333
 Observação: para executar o comando acima é necessário que tenha instalado globalmente o JSON-SERVER :
 
 ``` bash 
-npm install -g json-serverna 
+npm install -g json-server 
 ```
  Na sua máquina.
 
