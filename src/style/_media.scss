@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .container {
+      .totals {
+        width: 80%;
+        height: 15vh;
+        
+        .totals-revenue {
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .totals-expense {
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      
+      .progress-bar {
+        width: 80%;
+        padding: 1rem;
+      }
+  
+      .details-cashFlow {
+        width: 80%;
+      }
+    }
+  }

@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container .totals {
+    width: 80%;
+    height: 15vh;
+  }
+  .container .totals .totals-revenue p {
+    font-size: 1.2rem;
+  }
+  .container .totals .totals-expense p {
+    font-size: 1.2rem;
+  }
+  .container .progress-bar {
+    width: 80%;
+    padding: 1rem;
+  }
+  .container .details-cashFlow {
+    width: 80%;
+  }
+}
+
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #cfdae9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.container .content-fixed {
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.container .title-info {
+  width: 100%;
+  height: 40%;
+  background-color: #03b346d3;
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.container .title-info #current-balance {
+  width: 100%;
+  color: #fff;
+  font-style: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.container .title-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.container .totals {
+  width: 50%;
+  height: 20%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: -3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .totals .totals-revenue {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 0.4rem;
+  padding: 1.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .totals .totals-revenue:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.178);
+          box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.178);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.container .totals .totals-revenue p {
+  color: #07b63b;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.container .totals .totals-expense {
+  background-color: #fff;
+  width: 45%;
+  border-radius: 0.4rem;
+  padding: 1.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .totals .totals-expense:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.178);
+          box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.178);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.container .totals .totals-expense p {
+  color: #ee1a1a;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.container .progress-bar {
+  width: 50%;
+  background-color: #fff;
+  height: 15%;
+  text-align: center;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.container .progress-bar .progress-bar-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .progress-bar .progress-bar-title p {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.container .progress-bar .progress-bar-percent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 24px;
+  font-weight: 600;
+}
+
+.container .progress-bar .progress-bar-percent #percent-revenue {
+  color: #07b63b;
+}
+
+.container .progress-bar .progress-bar-percent #percent-expense {
+  color: #ee1a1a;
+}
+
+.container .progress-bar #progress-bar-percent {
+  background-color: #ee1a1a;
+  border-radius: 2rem;
+  margin: 0.3rem 0.1rem;
+}
+
+.container .progress-bar #progress-bar-percent:hover {
+  -webkit-box-shadow: 1px 1px 5px 1px #6b6b6b;
+          box-shadow: 1px 1px 5px 1px #6b6b6b;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.container .progress-bar #progress-bar-percent div {
+  height: 24px;
+  width: 0;
+  border-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.container .new-movement {
+  width: 50%;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.container .new-movement button {
+  border: none;
+  color: #000;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .details-cashFlow {
+  width: 50%;
+  background-color: transparent;
+  border-radius: 0.4rem;
+}
+
+.container .details-cashFlow .details-description-revenue {
+  border: solid 1.5px #07b63b;
+}
+
+.container .details-cashFlow .details-description-expense {
+  border: solid 1.5px #ee1a1a;
+}
+
+.container .details-cashFlow .details-description {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .details-cashFlow .details-description .description-category #description {
+  font-size: 1.2rem;
+}
+
+.container .details-cashFlow .details-description .description-category #category {
+  color: #a8a8a8;
+}
+
+.container .details-cashFlow .details-description .description-value {
+  text-align: right;
+}
+
+.container .details-cashFlow .details-description .description-value #value {
+  font-size: 1.2rem;
+}
+
+.container .details-cashFlow .details-description .description-value #date {
+  color: #a8a8a8;
+}
+
+.container .modal {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container .modal form {
+  width: 50%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+.container .modal form .modal-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .modal form .modal-content p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container .modal form .modal-content .close-modal {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.container .modal form .modal-content .close-modal span:hover {
+  color: #000;
+}
+
+.container .modal form .modal-content button {
+  width: 15%;
+  height: 4vh;
+  background-color: #07b63b;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.container .modal form .modal-content button:hover {
+  opacity: 0.8;
+}
+
+.container .modal form .modal-content select, .container .modal form .modal-content input {
+  width: 50%;
+  height: 4vh;
+  margin: 0.4rem 0 0.4rem 0;
+}
+
+.container .modal form .close-modal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0;
+}
+
+.container .modal form .close-modal span {
+  color: #a8a8a8;
+  font-size: 28px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

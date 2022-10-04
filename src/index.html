@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Fluxo de Caixa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content-fixed">
+            <div class="title-info">
+                <h1>Fluxo de Caixa</h1>
+                <p id="current-balance"></p>
+                <p>Saldo Atual</p>
+            </div>
+            <div class="totals">
+                <div class="totals-revenue">
+                    <p id="current-revenue"></p>
+                    <p>Entradas</p>
+                </div>
+                <div class="totals-expense">
+                    <p id="current-expense"></p>
+                    <p>Saídas</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-content">
+                    <div class="progress-bar-title">
+                        <p>Entradas</p>
+                        <p>Saídas</p>
+                    </div>
+                    <div id="progress-bar-percent">
+                        <div id="myBar"></div>
+                    </div>
+                    <div class="progress-bar-percent">
+                        <p id="percent-revenue"></p>
+                        <p id="percent-expense"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="new-movement">
+                <button id="myBtn" onclick="openModal()">Novo Movimento
+                    <span class="material-icons">add</span>
+                </button>
+            </div>
+        </div>
+        <div class="details-cashFlow" id="details">
+
+        </div>
+        <div id="myModal" class="modal">
+            <form>
+                <div class="modal-content">
+                    <div class="close-modal">
+                        <span onclick="closeModal()" class="close material-icons">
+                        close
+                        </span>
+                    </div>
+                    <p>Adicionar novo movimento</p>
+
+                    <label for="new-type">Tipo de movimento:</label>
+                    <select id="new-type" required onchange="onTypeMovementChange()">
+                        <option value="" name=""></option>
+                        <option value="revenue" name="revenue">Entrada</option>
+                        <option value="expense" name="expense">Saída</option>
+                    </select>
+
+                    <label for="new-category">Categoria:</label>
+                    <select id="new-category" required>
+                        <option value="" name=""></option>
+                        <option value="alimentação" name="alimentação">Alimentação</option>
+                        <option value="saúde" name="saúde">Saúde</option>
+                        <option value="lazer" name="lazer">Lazer</option>
+                        <option value="moradia" name="moradia">Moradia</option>
+                        <option value="transporte" name="transporte">Transporte</option>
+                        <option value="tv/internet" name="tv/internet">TV/Internet</option>
+                    </select>
+                
+                    <label for="new-description">Descrição</label>
+                    <input type="text" id="new-description" name="description" required/>
+
+                    <label for="new-value">Valor:</label>
+                    <input type="text" id="new-value" name="value" required/>
+            
+                    <label for="new-date">Data:</label>
+                    <input type="date" id="new-date" name="date" required/>
+               
+                    <button type="button" onclick="submitForm()">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

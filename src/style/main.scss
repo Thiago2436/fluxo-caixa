@@ -1,0 +1,295 @@
+$background-title: #03b346d3;
+$background-body: #cfdae9;
+$color-revenue: #07b63b;
+$color-expense: #ee1a1a;
+$text-movement: rgb(168, 168, 168);
+
+@mixin hoverEffect {
+  box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.178);
+  transform: translateY(-0.25em);
+}
+
+@mixin flexbox($flex-direction,$justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: center;
+  justify-content: $justify-content;
+}
+
+@import 'base';
+@import 'media';
+
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: $background-body;
+  @include flexbox(column,stretch);
+
+  .content-fixed {
+    width: 100%;
+    height: 60%;
+    @include flexbox(column,stretch);
+  }
+
+  .title-info {
+    width: 100%;
+    height: 40%;
+    background-color: $background-title;
+    text-align: center;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+
+    #current-balance {
+      width: 100%;
+      color: #fff;
+      font-style: bold;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .totals {
+    width: 50%;
+    height: 20%;
+    text-align: center;
+    font-size: 1.5rem;  
+    margin-top: -3.5rem;
+    @include flexbox(row,space-between);
+
+    .totals-revenue {
+      background-color: #fff;
+      width: 45%;
+      border-radius: 0.4rem;
+      padding: 1.3rem 0;
+      @include flexbox(column,center);
+
+      &:hover {
+        @include hoverEffect();
+      }
+
+      p {
+        color: $color-revenue;
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+    }
+
+    .totals-expense {
+      background-color: #fff;
+      width: 45%;
+      border-radius: 0.4rem;
+      padding: 1.3rem 0;
+      @include flexbox(column,center);
+
+      &:hover {
+        @include hoverEffect();
+      }
+
+      p {
+        color: $color-expense;
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .progress-bar {
+    width: 50%;
+    background-color: #fff;
+    height: 15%;
+    text-align: center;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    @include flexbox(column,center);
+    align-items: stretch;
+
+    .progress-bar-title {
+      @include flexbox(row,space-between);
+
+      p {
+        font-size: 1.2rem;
+        color:#000;
+      }
+    }
+
+    .progress-bar-percent {
+      @include flexbox(row,space-between);
+      height: 24px;
+      font-weight: 600;
+
+      #percent-revenue {
+        color: $color-revenue;
+      }
+
+      #percent-expense {
+        color: $color-expense;
+      }
+    }
+
+    #progress-bar-percent {
+      background-color: $color-expense;
+      border-radius: 2rem;
+      margin: 0.3rem 0.1rem;
+
+      &:hover {
+        box-shadow: 1px 1px 5px 1px #6b6b6b;
+        transition: 150ms;
+      }
+
+      div {
+        height: 24px;
+        width: 0;
+        border-radius: 2rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  .new-movement { 
+    width: 50%;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    button {
+      border: none;
+      color: #000;
+      background-color: transparent;
+      font-size: 1rem;
+      cursor: pointer;
+      @include flexbox(row, center);
+    }
+  }
+
+  .details-cashFlow {
+    width: 50%;
+    background-color: transparent;
+    border-radius: 0.4rem;
+
+    .details-description-revenue {
+      border: solid 1.5px $color-revenue;
+    }
+
+    .details-description-expense {
+      border: solid 1.5px $color-expense;
+    }
+    
+    .details-description {
+      width: 100%;
+      padding: 1rem;
+      background-color: #fff;
+      margin-bottom: 1rem;
+      border-radius: 0.4rem;
+      @include flexbox(row, space-between);
+
+      .description-category {
+        #description {
+          font-size: 1.2rem;
+        }
+        #category {
+          color:$text-movement;
+        }
+      }
+
+      .description-value {
+        text-align: right;
+        #value {
+          font-size: 1.2rem;
+        }
+        #date {
+          color: $text-movement;
+        }
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: #000; 
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    form {
+      width: 50%;
+      height: 70%;
+      background-color: #fff;      
+      border-radius: 0.3rem;
+
+      .modal-content {
+        width: 100%;
+        @include flexbox(column, center);
+
+          p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+          }
+
+          .close-modal {
+            padding: 1rem;
+            cursor: pointer;
+            
+            span {
+
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+  
+          button {
+            width: 15%;
+            height: 4vh;
+            background-color: $color-revenue;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+  
+            &:hover {
+              opacity: 0.8;
+            }
+      }
+  
+          select, input {
+            width: 50%;
+            height: 4vh;
+            margin: 0.4rem 0 0.4rem 0;
+          }
+
+      }
+
+      .close-modal {
+        width: 100%;
+        @include flexbox(row, flex-end);
+        padding: 0;
+
+        span {
+          color: $text-movement;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+      }
+    }
+  }
+}
+

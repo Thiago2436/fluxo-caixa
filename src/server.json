@@ -1,0 +1,60 @@
+{
+  "movements": [
+    {
+      "id": 1,
+      "category": "",
+      "description": "Salário do mês",
+      "value": 2000,
+      "date": "06/06/2021",
+      "type": "revenue"
+    },
+    {
+      "id": 2,
+      "category": "Alimentação",
+      "description": "Lanche",
+      "value": 25,
+      "date": "01/06/2021",
+      "type": "expense"
+    },
+    {
+      "id": 3,
+      "category": "Alimentação",
+      "description": "Feira do mês",
+      "value": 600,
+      "date": "15/06/2021",
+      "type": "expense"
+    },
+    {
+      "id": 4,
+      "category": "",
+      "description": "Vendas externas",
+      "value": 1700,
+      "date": "26/06/2021",
+      "type": "revenue"
+    },
+    {
+      "id": 5,
+      "category": "Farmácia",
+      "description": "Remédios de Maria",
+      "value": 320,
+      "date": "15/06/2021",
+      "type": "expense"
+    },
+    {
+      "id": 6,
+      "category": "Lazer",
+      "description": "Passeio no shopping",
+      "value": 300,
+      "date": "15/06/2021",
+      "type": "expense"
+    },
+    {
+      "type": "expense",
+      "category": "transporte",
+      "description": "gasolina",
+      "value": 30,
+      "date": "21/07/2021",
+      "id": 7
+    }
+  ]
+}
