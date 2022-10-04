@@ -24,7 +24,12 @@ Como foi utilizado a biblioteca [JSON-SERVER](https://github.com/typicode/json-s
 json-server ./src/server.json --port 3333
 ```
 
-Observação: para executar o comando acima é necessário que tenha instalado globalmente o JSON-SERVER na sua máquina.
+Observação: para executar o comando acima é necessário que tenha instalado globalmente o JSON-SERVER :
+
+``` bash 
+npm install -g json-serverna 
+```
+ Na sua máquina.
 
 Em seguida abra o index.html no seu navegador. 
 
