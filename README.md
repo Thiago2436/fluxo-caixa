@@ -1,7 +1,7 @@
 # FLUXO DE CAIXA 💰
   
 ## Descrição
-Esta projeto foi desenvolvido para praticar minhas habilidades em Javascript, e tem por objetivo ser um simples fluxo de caixa para registrar entradas e saídas financeiras, exibindo os devidos valores, saldo e uma progressão visual do quanto foi gasto ou não.
+ Contrele de Fluxo de caixa
 
 ## 💻📱 Preview
 <a href="">Acesse</a>
@@ -18,7 +18,7 @@ Esta projeto foi desenvolvido para praticar minhas habilidades em Javascript, e 
 
 ## ⚙️ Executando o projeto
 
-Como foi utilizado a biblioteca [JSON-SERVER](https://github.com/typicode/json-server) para ter uma API mockada é necessário inicar com o comando abaixo no diretório do projeto: 
+Como foi utilizado a biblioteca [JSON-SERVER](https://github.com/typicode/json-server) para ter uma API oculta é necessário inicar com o comando abaixo no diretório do projeto: 
 
 ```bash
 json-server ./src/server.json --port 3333
